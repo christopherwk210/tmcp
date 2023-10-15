@@ -5,6 +5,7 @@ import { tmcp } from '@/tmcp';
 import { setKeepOpen } from '@/electron';
 
 import Settings from './Settings.vue';
+import Info from './Info.vue';
 
 function onDisplay() {
   if (selectedResult.value) {
@@ -46,6 +47,7 @@ function onDisplay() {
   </div>
 
   <Settings v-if="selectedResult && selectedResult.text === 'TMCP Settings'" />
+  <Info v-if="selectedResult && selectedResult.text === 'TMCP Info'" />
 </template>
 
 <style scoped>
