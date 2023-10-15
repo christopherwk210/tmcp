@@ -1,6 +1,6 @@
 {
   "name": "tophers-modular-command-palette",
-  "description": "A global plugin-powered command palette",
+  "description": "A plugin-powered desktop command palette",
   "version": "1.0.0",
   "private": true,
   "author": {
