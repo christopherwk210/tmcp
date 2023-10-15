@@ -1,0 +1,11 @@
+{
+  "name": "GM Recent Projects",
+  "description": "Open recent GameMaker projects directly from your search results.",
+  "icon": "./gm.png",
+  "scripts": [
+    "gm-recents.js"
+  ],
+  "styles": [
+    "gm-recents.css"
+  ]
+}

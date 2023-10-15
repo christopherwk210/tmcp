@@ -1,0 +1,11 @@
+{
+  "name": "TinyPNG",
+  "description": "Losslessly compress PNGs/JPGs with TinyPNG.",
+  "icon": "./tinypngg.png",
+  "scripts": [
+    "tinypng.js"
+  ],
+  "styles": [
+    "tinypng.css"
+  ]
+}

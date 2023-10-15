@@ -1,0 +1,11 @@
+{
+  "name": "GM Docs",
+  "description": "Get instant keyword search results from the GameMaker documentation.",
+  "icon": "./gm.png",
+  "scripts": [
+    "gm-docs.js"
+  ],
+  "styles": [
+    "gm-docs.css"
+  ]
+}

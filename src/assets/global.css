@@ -1,0 +1,149 @@
+:root {
+  --background: #3D3145;
+  --borders: #5B499C;
+  --bordersHighlight: #6250a6;
+  --bordersDim: #4C3D70;
+  --controlColor: #F45336;
+  --controlSelectedColor: #55C78B;
+  --highlightColor: #21C4E5;
+  --linkColor: var(--highlightColor);
+  --checkboxCheckColor: var(--background);
+  --animationSpeed: 0.1s;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-user-drag: none;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: 'JetBrainsMono', monospace;
+  background: transparent;
+  color: white;
+}
+
+#app {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--borders);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--borders);
+}
+
+.checkbox-label, .checkbox-label * {
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: var(--controlColor);
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid var(--controlColor);
+  border-radius: 0.15em;
+  display: grid;
+  place-content: center;
+  transition: background-color var(--animationSpeed) ease;
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: var(--animationSpeed) transform ease-in-out;
+  box-shadow: inset 1em 1em var(--checkboxCheckColor);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked:before {
+  transform: scale(1);
+}
+
+input[type="checkbox"]:checked {
+  background: var(--controlSelectedColor);
+  border: 0.15em solid var(--controlSelectedColor);
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid transparent;
+  outline-offset: max(2px, 0.15em);
+}
+
+::selection {
+  background: var(--highlightColor);
+}
+
+a {
+  color: var(--linkColor);
+  user-select: none;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  padding: 0.75em;
+  background: var(--controlColor);
+  cursor: pointer;
+  border-radius: 0.15em;
+  color: white;
+  user-select: none;
+}
+
+button:hover {
+  background: var(--controlSelectedColor);
+  color: black;
+}
+
+select, input[type="text"] {
+  background: var(--controlColor);
+  font-family: inherit;
+  border: none;
+  border-radius: 0.15em;
+  color: white;
+  padding: 0.5em;
+  outline: none;
+  font-size: inherit;
+}
+
+select {
+  cursor: pointer;
+}
+
+select:hover {
+  background: var(--controlSelectedColor);
+}
+
+option, select * {
+  font-size: inherit;
+  color: white;
+  background-color: var(--background);
+}
+
+label {
+  user-select: none;
+}

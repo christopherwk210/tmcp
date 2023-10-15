@@ -1,0 +1,31 @@
+:root {
+  --background: #1E1E1E;
+  --linkColor: var(--highlightColor);
+  --borders: #3C3C3C;
+  --bordersHighlight: #4e4e4e;
+  --bordersDim: #2a2a2a;
+  --checkboxCheckColor: black;
+  --controlSelectedColor: white;
+  --controlColor: white;
+}
+
+.container, .settings * {
+  border-radius: 0 !important;
+}
+
+.settings input, .settings select {
+  background: var(--background) !important;
+  color: white !important;
+  border: 1px solid white !important;
+}
+
+button {
+  background-color: transparent !important;
+  color: white !important;
+  border: 1px solid white !important;
+}
+
+button:hover {
+  background-color: white !important;
+  color: black !important;
+}

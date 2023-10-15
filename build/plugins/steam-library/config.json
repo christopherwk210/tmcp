@@ -1,0 +1,8 @@
+{
+  "name": "Steam Library",
+  "description": "Launch your Steam games.",
+  "icon": "./steam.png",
+  "scripts": [
+    "steam.js"
+  ]
+}

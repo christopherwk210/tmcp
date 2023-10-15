@@ -1,0 +1,54 @@
+:root {
+  --background: white;
+  --linkColor: blue;
+  --borders: #D9D8D9;
+  --bordersHighlight: #e0e0e0;
+  --bordersDim: #ececec;
+  --checkboxCheckColor: black;
+  --controlSelectedColor: white;
+  --controlColor: white;
+}
+
+html, body {
+  color: black;
+}
+
+.item {
+  color: rgb(74, 74, 74) !important;
+}
+
+.query {
+  color: black !important;
+}
+
+.preview-text {
+  color: black !important;
+}
+
+.help-text, .description-text {
+  color: rgba(0, 0, 0, 0.5) !important;
+  font-weight: bolder !important;
+}
+
+.settings option {
+  color: black !important;
+}
+
+.container, .settings * {
+  border-radius: 0 !important;
+}
+
+.settings input, .settings select {
+  color: black !important;
+  border: 1px solid black !important;
+}
+
+button {
+  color: black !important;
+  border: 1px solid black !important;
+}
+
+button:hover {
+  background-color: black !important;
+  color: white !important;
+}

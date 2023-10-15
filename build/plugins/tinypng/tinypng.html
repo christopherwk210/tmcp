@@ -1,0 +1,72 @@
+<style>
+  .tinypng {
+    flex: 1;
+    padding: 1em;
+    overflow: auto;
+  }
+
+  .tinypng, .tinypng * {
+    user-select: none;
+  }
+
+  .file-button {
+    text-align: center;
+    font-style: italic;
+    border-radius: 0.25em;
+    padding: 2em 0;
+    background: var(--borders);
+    cursor: pointer;
+    display: block;
+  }
+
+  #fileInput {
+    display: none;
+  }
+
+  #tinypng-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .tinypng-image {
+    padding: 0.5em;
+    background: var(--borders);
+    border-radius: 0.25em;
+    font-size: 0.9em;
+    cursor: pointer;
+  }
+
+  .tinypng-image span {
+    display: block;
+  }
+
+  .tinypng-image span:first-child {
+    padding-bottom: 0.25em;
+    opacity: 0.7;
+  }
+  
+  .tinypng-image span:last-child {
+    border-top: 1px solid var(--background);
+    padding-top: 0.25em;
+  }
+
+  .disclaimer {
+    font-size: 0.8em;
+    opacity: 0.7;
+    margin-bottom: 1em;
+    margin-top: 0;
+  }
+</style>
+
+<div class="tinypng">
+  <p class="disclaimer">Note: This will automatically replace your images with the compressed version!</p>
+
+  <label class="file-button" for="fileInput">
+    <input type="file" id="fileInput" multiple accept="image/*" onchange="handleFiles(this.files)">
+    Select images
+  </label>
+
+  <p style="margin-top: 1em; text-decoration: underline;">Queue:</p>
+  <div id="tinypng-images"></div>
+</div>

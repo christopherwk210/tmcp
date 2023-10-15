@@ -1,0 +1,12 @@
+.html[data-source="GM Recent Projects"] {
+  padding: 1em;
+}
+
+.html[data-source="GM Recent Projects"] .path-box {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1em;
+  overflow: auto;
+  word-break: break-all;
+  border-radius: 0.15em;
+  margin-bottom: 1em;
+}

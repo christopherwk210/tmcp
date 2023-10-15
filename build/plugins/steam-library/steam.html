@@ -1,0 +1,74 @@
+<style>
+  .steam-game {
+    position: relative;
+  }
+
+  .behind-game-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: var(--borders);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    word-break: break-all;
+    overflow: hidden;
+  }
+
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 3px solid var(--borders);
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+    max-height: 70%;
+    max-width: 70%;
+    transform: translate(-50%, -50%);
+    object-fit: contain;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+
+  .steam-content {
+    padding: 1em;
+  }
+
+  .steam-icon {
+    height: 1em;
+    width: 1em;
+    margin-right: 0.5em;
+  }
+
+  .steam-text {
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+</style>
+
+<div class="steam-game">
+  <div class="behind-game-name">$name</div>
+  <div class="hero" style="background-image: url('$hero')">
+    <img class="logo" src="$logo">
+  </div>
+
+  <div class="steam-content">
+    <h4 class="steam-text"><img class="steam-icon" src="$icon"> $name</h4>
+    <div style="margin: 0.5em 0;">
+      <button onclick="steamLaunchGame('$name')">Launch</button>
+      <button onclick="steamBrowse('$name')">Browse local files</button>
+    </div>
+    <h4 class="steam-text">Size on disk: $size<small>GB</small></h4>
+  </div>
+</div>

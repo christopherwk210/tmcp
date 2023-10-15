@@ -1,0 +1,31 @@
+{
+  "name": "tophers-modular-command-palette",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist_electron/main.js",
+  "scripts": {
+    "start": "node tools/electron.mjs",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.12",
+    "electron-settings": "^4.0.2",
+    "marked": "^9.1.0",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.2",
+    "@types/node": "^18.17.17",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vue/tsconfig": "^0.4.0",
+    "electron": "^26.3.0",
+    "electron-builder": "^24.6.4",
+    "nodemon": "^3.0.1",
+    "npm-run-all2": "^6.0.6",
+    "typescript": "~5.2.0",
+    "vite": "^4.4.9",
+    "vue-tsc": "^1.8.11"
+  }
+}

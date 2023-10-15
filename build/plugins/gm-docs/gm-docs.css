@@ -1,0 +1,44 @@
+.marked-html[data-source="GM Docs"] {
+  background: #282828;
+  color: white;
+}
+
+.marked-html[data-source="GM Docs"] h4 {
+  background: #039E5C;
+  margin-top: -1em;
+  margin-left: -1em;
+  margin-right: -1em;
+  padding: 1em;
+
+  border-bottom: 3px solid var(--borders);
+}
+
+.marked-html[data-source="GM Docs"] table {
+  background: #333;
+  border: solid #026b3e 2px;
+  border-collapse: separate;
+  border-radius: 5px;
+}
+
+.marked-html[data-source="GM Docs"] table tr {
+  border: solid #039e5c 1px;
+  border-spacing: 2px;
+  background: #555;
+}
+
+.marked-html[data-source="GM Docs"] table tr:nth-child(odd) {
+  background: #4d4d4d;
+}
+
+.marked-html[data-source="GM Docs"] table th {
+  color: #efefef;
+  background: #039e5c;
+  border-style: none !important;
+  text-align: center;
+}
+
+.marked-html[data-source="GM Docs"] table td {
+  border-spacing: 2px;
+  border: solid #333 1px;
+  padding: 10px;
+}

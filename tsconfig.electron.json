@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "lib": ["dom"],
+    "outDir": "./dist_electron"
+  },
+  "include": [
+    "electron/**/*.ts",
+    "electron/**/*.d.ts"
+  ]
+}

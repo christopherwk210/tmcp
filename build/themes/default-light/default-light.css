@@ -1,0 +1,42 @@
+:root {
+  --background: #d6c3e3;
+  --linkColor: #026175;
+  --borders: #8774cd;
+  --bordersHighlight: #9480db;
+  --bordersDim: #c2abd1;
+  --checkboxCheckColor: black;
+  --controlSelectedColor: #46b579;
+}
+
+html, body {
+  color: black;
+}
+
+.item {
+  color: rgb(74, 74, 74) !important;
+}
+
+.query {
+  color: black !important;
+}
+
+.preview-text {
+  color: black !important;
+}
+
+.help-text {
+  color: rgba(0, 0, 0, 0.5) !important;
+  font-weight: bolder !important;
+}
+
+.description-text {
+  color: #474747 !important;
+}
+
+option {
+  color: black !important;
+}
+
+.settings h4 {
+  color: white !important;
+}
