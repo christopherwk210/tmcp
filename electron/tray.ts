@@ -22,7 +22,7 @@ export function createTrayIcon() {
       }
     },
     { type: 'separator' },
-    { label: 'View on itch.io', click: () => shell.openExternal('') },
+    { label: 'View on itch.io', click: () => shell.openExternal('https://topherlicious.itch.io/tmcp') },
     { label: 'View on GitHub', click: () => shell.openExternal('https://github.com/christopherwk210/tmcp') },
     { type: 'separator' },
     { label: 'Exit', click: () => process.exit(0) }
