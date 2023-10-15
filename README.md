@@ -9,6 +9,10 @@ Topher's Modular Command Palette (TMCP) is a plugin-powered desktop command pale
 - **GM Docs**: Instant keyword search results from the GameMaker documentation
 - **GM Recent Projects**: Search recent GameMaker projects, open them, and see their file locations
 
+## Download
+
+You can get the latest build on [itch.io](https://topherlicious.itch.io/tmcp).
+
 ## Development
 
 Requires Node >=16.7.0.
