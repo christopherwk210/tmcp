@@ -12,6 +12,7 @@ lerna-debug.log*
 dist
 dist_electron
 bin
+publish
 dist-ssr
 coverage
 *.local

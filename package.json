@@ -1,13 +1,18 @@
 {
   "name": "tophers-modular-command-palette",
+  "description": "A global plugin-powered command palette",
   "version": "1.0.0",
   "private": true,
+  "author": {
+    "name": "Topher Anselmo",
+    "email": "christopherwk210@gmail.com"
+  },
   "main": "dist_electron/main.js",
   "scripts": {
     "start": "node tools/electron.mjs",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "build-only": "vite build",
-    "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
+    "build": "node tools/electron-build.mjs",
+    "vue:build": "vue-tsc --noEmit -p tsconfig.app.json --composite false && vite build",
+    "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
     "@electron/remote": "^2.0.12",
@@ -23,9 +28,11 @@
     "electron": "^26.3.0",
     "electron-builder": "^24.6.4",
     "nodemon": "^3.0.1",
-    "npm-run-all2": "^6.0.6",
     "typescript": "~5.2.0",
     "vite": "^4.4.9",
     "vue-tsc": "^1.8.11"
+  },
+  "engines": {
+    "node": ">=16.7.0"
   }
 }
