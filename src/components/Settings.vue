@@ -57,6 +57,10 @@ function pluginButtons(pluginName: string) {
 
   return tmcpPlugin.buttons;
 }
+
+function openWiki() {
+  require('@electron/remote').shell.openExternal('https://github.com/christopherwk210/tmcp/wiki');
+}
 </script>
 
 <template>
@@ -117,7 +121,7 @@ function pluginButtons(pluginName: string) {
           <button @click="openSettingsFile()">Open settings file</button>
           <button @click="reload()">Reload TMCP</button>
         </div>
-        <a href="#">Open wiki</a>
+        <a href="#" @click.prevent="openWiki()">Open wiki</a>
       </template>
     </SettingsGroup>
   </div>
