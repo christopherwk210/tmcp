@@ -13,6 +13,10 @@ Topher's Modular Command Palette (TMCP) is a plugin-powered desktop command pale
 
 You can get the latest build on [itch.io](https://topherlicious.itch.io/tmcp).
 
+## Customizing
+
+TMCP supports custom plugins and themes! Check out the [wiki](https://github.com/christopherwk210/tmcp/wiki) to learn more.
+
 ## Development
 
 Requires Node >=16.7.0.
