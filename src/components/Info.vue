@@ -2,6 +2,14 @@
 import { ref } from 'vue';
 
 const version = ref(require('@electron/remote').app.getVersion());
+const remoteVersion = ref('');
+
+fetch('https://raw.githubusercontent.com/christopherwk210/tmcp/master/package.json')
+.then(res => res.json())
+.then(data => {
+  remoteVersion.value = data.version;
+})
+.catch(() => remoteVersion.value = version.value);
 
 function github() {
   require('@electron/remote').shell.openExternal('https://github.com/christopherwk210/tmcp');
@@ -21,6 +29,7 @@ function itch() {
       <button @click="github()">GitHub</button>
       <button @click="itch()">itch.io</button>
     </p>
+    <h4 v-if="remoteVersion !== version" class="new-version-text">A new version is available on itch.io!</h4>
   </div>
 </template>
 
@@ -48,6 +57,11 @@ h3 {
   text-align: center;
   font-size: 1.2em;
   margin-top: 0;
+}
+
+.new-version-text {
+  text-align: center;
+  color: var(--controlColor);
 }
 
 .info-buttons {
