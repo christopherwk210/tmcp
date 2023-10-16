@@ -1,4 +1,5 @@
 import { Tray, Menu, shell } from 'electron';
+import settings from 'electron-settings';
 import * as path from 'path';
 import { mediaDirectory, iconPath } from './shared';
 import { showWindowIfHidden, windowState } from './browser-window';
@@ -9,7 +10,7 @@ const state = {
   tray: null as Tray | null
 };
 
-export function createTrayIcon() {
+export async function createTrayIcon() {
   const menu = Menu.buildFromTemplate([
     { enabled: false, label: 'Topher\'s Modular Command Palette', icon: iconImagePath },
     { type: 'separator' },
@@ -32,4 +33,14 @@ export function createTrayIcon() {
   state.tray.setToolTip(`Topher's Modular Command Palette`);
   state.tray.setContextMenu(menu);
   state.tray.on('click', () => showWindowIfHidden());
+
+  const hasShownTrayBalloon = await settings.get('hasShownTrayBalloon');
+  if (!hasShownTrayBalloon) {
+    state.tray.displayBalloon({
+      title: 'Topher\'s Modular Command Palette',
+      content: 'TMCP lives in your system tray! Check it out!'
+    });
+
+    await settings.set('hasShownTrayBalloon', true);
+  }
 }

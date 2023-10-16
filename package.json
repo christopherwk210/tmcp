@@ -1,7 +1,7 @@
 {
   "name": "tophers-modular-command-palette",
   "description": "A plugin-powered desktop command palette",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "author": {
     "name": "Topher Anselmo",
