@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 
 const version = ref(require('@electron/remote').app.getVersion());
-const remoteVersion = ref('');
+const remoteVersion = ref(version.value);
 
 fetch('https://raw.githubusercontent.com/christopherwk210/tmcp/master/package.json')
 .then(res => res.json())
