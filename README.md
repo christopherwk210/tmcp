@@ -13,6 +13,10 @@ Topher's Modular Command Palette (TMCP) is a plugin-powered desktop command pale
 
 You can get the latest build on [itch.io](https://topherlicious.itch.io/tmcp).
 
+## How to use
+
+The program will live in your system tray as an icon, and the window can be shown any time by clicking that or by entering the default shortcut: `Ctrl + Alt + Space`. Once the window has popped up, you can enter your query and interact with the results. Pressing `Escape` will close the window. Type in `tmcp settings` to access the settings screen.
+
 ## Customizing
 
 TMCP supports custom plugins and themes! Check out the [wiki](https://github.com/christopherwk210/tmcp/wiki) to learn more.
