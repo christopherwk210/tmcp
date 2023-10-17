@@ -45,11 +45,11 @@ const config = {
       {
         target: 'dir',
         arch: ['x64']
+      },
+      {
+        target: 'portable',
+        arch: ['x64']
       }
-      // {
-      //   target: 'portable',
-      //   arch: ['x64']
-      // }
     ],
     executableName: 'tmcp'
   },
