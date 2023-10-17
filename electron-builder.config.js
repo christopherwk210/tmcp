@@ -43,9 +43,13 @@ const config = {
     artifactName: 'tmcp.${ext}',
     target: [
       {
-        target: 'portable',
+        target: 'dir',
         arch: ['x64']
       }
+      // {
+      //   target: 'portable',
+      //   arch: ['x64']
+      // }
     ],
     executableName: 'tmcp'
   },
