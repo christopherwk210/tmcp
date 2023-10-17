@@ -30,4 +30,4 @@ Requires Node >=16.7.0.
 3. Use `npm start` to run in development mode
 4. Use `npm run build` to make a binary
 
-The final executable will be built into the `./publish` directory, along with the included plugins and themes.
+The final executable will be built into the `./publish` directory, along with the included plugins and themes. This version will be a "portable" version which seems to be flagged as a virus on most systems, so for now you can instead use the version that is built into `./bin/win-unpacked` which is what is currently available for download.
