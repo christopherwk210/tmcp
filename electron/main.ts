@@ -1,4 +1,4 @@
-import { app, protocol, globalShortcut, dialog } from 'electron';
+import { app, protocol, globalShortcut } from 'electron';
 import { initialize } from '@electron/remote/main';
 import { createApplicationProtocol } from './create-protocol';
 import { createWindow, showWindowIfHidden } from './browser-window';

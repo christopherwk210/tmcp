@@ -89,6 +89,13 @@ export const appSettings: AppSetting[] = [
     value: 3,
     min: 1,
     max: 10
+  },
+  {
+    text: 'Show notification on launch',
+    key: 'show-tray-balloon',
+    category: 'Behavior',
+    type: 'boolean',
+    value: true
   }
 ];
 
