@@ -124,6 +124,10 @@ function createTmcpOpForPlugin(plugin: TMCPPlugin) {
       const pluginSetting = electronState.value.pluginSettings.find(pluginSetting => pluginSetting.name === plugin.name)!;
       if (pluginSetting.settings[settingsOptions.text] === undefined) {
         pluginSetting.settings[settingsOptions.text] = settingsOptions;
+      } else {
+        const loadedValue = pluginSetting.settings[settingsOptions.text].value;
+        pluginSetting.settings[settingsOptions.text] = settingsOptions;
+        pluginSetting.settings[settingsOptions.text].value = loadedValue;
       }
 
       return (newValue?: any) => {
@@ -163,7 +167,8 @@ function createTmcpOpForPlugin(plugin: TMCPPlugin) {
 
 async function commitSettingsForPlugin(plugin: TMCPPlugin) {
   const pluginSetting = electronState.value.pluginSettings.find(pluginSetting => pluginSetting.name === plugin.name)!;
-  await setPluginSettings(pluginSetting.name, JSON.parse(JSON.stringify(pluginSetting.settings)));
+  const settingsCopy = JSON.parse(JSON.stringify(pluginSetting.settings));
+  await setPluginSettings(pluginSetting.name, settingsCopy);
 }
 
 export function uninitializePlugin(pluginName: string) {
